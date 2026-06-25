@@ -1,0 +1,190 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@langchain/core':
+        specifier: ^1.2.1
+        version: 1.2.1(openai@6.45.0(zod@4.4.3))
+      '@langchain/openai':
+        specifier: ^1.5.3
+        version: 1.5.3(@langchain/core@1.2.1(openai@6.45.0(zod@4.4.3)))
+      chalk:
+        specifier: ^5.6.2
+        version: 5.6.2
+      dotenv:
+        specifier: ^17.4.2
+        version: 17.4.2
+      zod:
+        specifier: ^4.4.3
+        version: 4.4.3
+
+packages:
+
+  '@cfworker/json-schema@4.1.1':
+    resolution: {integrity: sha1-Sio5R+6fp7fCS+mBQigxuGdMO+Y=}
+
+  '@langchain/core@1.2.1':
+    resolution: {integrity: sha1-RnUSWO5Wpq5HrleOunko05ldEe0=}
+    engines: {node: '>=20'}
+
+  '@langchain/openai@1.5.3':
+    resolution: {integrity: sha1-SbmhzyU1StPd5wkFl4p/baYCck0=}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@langchain/core': ^1.2.1
+
+  '@standard-schema/spec@1.1.0':
+    resolution: {integrity: sha1-p5tV26+GBIEvUtFAssmrQbwVC7g=}
+
+  base64-js@1.5.1:
+    resolution: {integrity: sha1-GxtEAWClv3rUC2UPCVljSBkDkwo=}
+
+  chalk@5.6.2:
+    resolution: {integrity: sha1-sSOLbiPqM3r3HH+KKV21rwwViuo=}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
+
+  dotenv@17.4.2:
+    resolution: {integrity: sha1-wH5Up0bhHroCHdnhBHztWv3BwDQ=}
+    engines: {node: '>=12'}
+
+  eventemitter3@4.0.7:
+    resolution: {integrity: sha1-Lem2j2Uo1WRO9cWVJqG0oHMGFp8=}
+
+  js-tiktoken@1.0.21:
+    resolution: {integrity: sha1-NoqZV1kaMKYpl90MTPMIZvAPgiE=}
+
+  langsmith@0.7.11:
+    resolution: {integrity: sha1-IFRRAyVolDumRtolJAFwy4XrZ38=}
+    peerDependencies:
+      '@opentelemetry/api': '*'
+      '@opentelemetry/exporter-trace-otlp-proto': '*'
+      '@opentelemetry/sdk-trace-base': '*'
+      openai: '*'
+      ws: '>=7'
+    peerDependenciesMeta:
+      '@opentelemetry/api':
+        optional: true
+      '@opentelemetry/exporter-trace-otlp-proto':
+        optional: true
+      '@opentelemetry/sdk-trace-base':
+        optional: true
+      openai:
+        optional: true
+      ws:
+        optional: true
+
+  mustache@4.2.0:
+    resolution: {integrity: sha1-5YkjJNYKEuycKnM1ntylKXK/b2Q=}
+    hasBin: true
+
+  openai@6.45.0:
+    resolution: {integrity: sha1-U4QMXFhIiE37/0cAb4ObJ9HZVbk=}
+    peerDependencies:
+      '@aws-sdk/credential-provider-node': '>=3.972.0 <4'
+      '@smithy/hash-node': '>=4.3.0 <5'
+      '@smithy/signature-v4': '>=5.4.0 <6'
+      ws: ^8.18.0
+      zod: ^3.25 || ^4.0
+    peerDependenciesMeta:
+      '@aws-sdk/credential-provider-node':
+        optional: true
+      '@smithy/hash-node':
+        optional: true
+      '@smithy/signature-v4':
+        optional: true
+      ws:
+        optional: true
+      zod:
+        optional: true
+
+  p-finally@1.0.0:
+    resolution: {integrity: sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=}
+    engines: {node: '>=4'}
+
+  p-queue@6.6.2:
+    resolution: {integrity: sha1-IGip3PjmfdDsPnory3aBD6qF5CY=}
+    engines: {node: '>=8'}
+
+  p-timeout@3.2.0:
+    resolution: {integrity: sha1-x+F6vJcdKnli74NiazXWNazyPf4=}
+    engines: {node: '>=8'}
+
+  zod@4.4.3:
+    resolution: {integrity: sha1-toDxcohdGLvr8hqDTqJeVaG781Y=}
+
+snapshots:
+
+  '@cfworker/json-schema@4.1.1': {}
+
+  '@langchain/core@1.2.1(openai@6.45.0(zod@4.4.3))':
+    dependencies:
+      '@cfworker/json-schema': 4.1.1
+      '@standard-schema/spec': 1.1.0
+      js-tiktoken: 1.0.21
+      langsmith: 0.7.11(openai@6.45.0(zod@4.4.3))
+      mustache: 4.2.0
+      p-queue: 6.6.2
+      zod: 4.4.3
+    transitivePeerDependencies:
+      - '@opentelemetry/api'
+      - '@opentelemetry/exporter-trace-otlp-proto'
+      - '@opentelemetry/sdk-trace-base'
+      - openai
+      - ws
+
+  '@langchain/openai@1.5.3(@langchain/core@1.2.1(openai@6.45.0(zod@4.4.3)))':
+    dependencies:
+      '@langchain/core': 1.2.1(openai@6.45.0(zod@4.4.3))
+      js-tiktoken: 1.0.21
+      openai: 6.45.0(zod@4.4.3)
+      zod: 4.4.3
+    transitivePeerDependencies:
+      - '@aws-sdk/credential-provider-node'
+      - '@smithy/hash-node'
+      - '@smithy/signature-v4'
+      - ws
+
+  '@standard-schema/spec@1.1.0': {}
+
+  base64-js@1.5.1: {}
+
+  chalk@5.6.2: {}
+
+  dotenv@17.4.2: {}
+
+  eventemitter3@4.0.7: {}
+
+  js-tiktoken@1.0.21:
+    dependencies:
+      base64-js: 1.5.1
+
+  langsmith@0.7.11(openai@6.45.0(zod@4.4.3)):
+    dependencies:
+      p-queue: 6.6.2
+    optionalDependencies:
+      openai: 6.45.0(zod@4.4.3)
+
+  mustache@4.2.0: {}
+
+  openai@6.45.0(zod@4.4.3):
+    optionalDependencies:
+      zod: 4.4.3
+
+  p-finally@1.0.0: {}
+
+  p-queue@6.6.2:
+    dependencies:
+      eventemitter3: 4.0.7
+      p-timeout: 3.2.0
+
+  p-timeout@3.2.0:
+    dependencies:
+      p-finally: 1.0.0
+
+  zod@4.4.3: {}
